@@ -249,13 +249,22 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(arr) {
   /*Your Code Here*/
-  const newarr = []
-  for ( let i = 0; i < arr.length; i++) {
-    // while(arr[i].years.includes())
+    const newarr = [];
+    
+    for ( let i = 0; i < arr.length; i++) {
+      let year = arr[i].years.split(' - ');
+      if (Number(year[0]) >= 1900 && Number(year[1]) <= 2000){
+        newarr.push(arr[i].name);
+        console.log(newarr);
+      }
+   }
+    return newarr
+  // const newarr = [];
+  // const newnum1 = arr.years.split
+  // const newnum2
 
-  }
 
-  return newarr
+
 }
 
 
@@ -315,7 +324,6 @@ function lotsOfArt(array) {
   for( let i = 0; i < array.length; i++){
     if(array[i].paintings > 100){
       newNames.push(array[i].name);
-      console.log('hello')
     }
 
   }
